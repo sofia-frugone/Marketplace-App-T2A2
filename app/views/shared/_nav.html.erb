@@ -1,30 +1,35 @@
-<header>
-  <div>
 
-    <nav> 
-      <ul>
-        <li><%= link_to "Home", root_path%></li>
-        <li><%= link_to "Listings", listings_path %></li>
+    <nav class="flex items-center justify-between flex-wrap bg-pink-400 p-6 shadow-lg"> 
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <span class="font-bold text-xl">Makeup Zoo</span>
+      </div>
+
+      <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto"> 
+        <div class="text-sm sm:flex-grow">
+
+          <ul>
+            <li class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-pink-500 mr-4"><%= link_to "Home", root_path%></li>
+            <li class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-pink-500 mr-4"><%= link_to "Listings", listings_path %></li>
 
 
 
 
-        <li><%= link_to "Purchase History", orders_bought_path%></li>
-        <li><%= link_to "Sold Items", orders_sold_path%></li>
+            <li class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-pink-500 mr-4"><%= link_to "Purchase History", orders_bought_path%></li>
+            <li class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-pink-500 mr-4"><%= link_to "Sold Items", orders_sold_path%></li>
       
     
-    
+      </div>
+      <div>
    
-      <% if user_signed_in? %>
-       <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-       <li><%= link_to "Sign Up", new_user_registration_path %></li>
-       <li><%= link_to "Sign In", new_user_session_path %></li>
-      <% end %>
-   
-
-
-      </ul>
+            <% if user_signed_in? %>
+              <li class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-pink-400 hover:bg-white mt-4 md:mt-0"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-pink-400 hover:bg-white mt-4 md:mt-0"><%= link_to "Sign Up", new_user_registration_path %></li>
+              <li class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-pink-400 hover:bg-white mt-4 md:mt-0"><%= link_to "Sign In", new_user_session_path %></li>
+            <% end %>
+  
+          </ul>
+        
+      </div>
     </nav>
-  </div>
-</header>
+  
