@@ -1,39 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listings</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Sold</th>
-      <th>User</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @listings.each do |listing| %>
+<h1 class="px-8 pt-8 text-lg text-gray-700 font-bold dark:bg-gray-700 dark:text-gray-400">Browse a variety of listings from small businesses across Australia</h1>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg py-10">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
       <tr>
-        <td><%= listing.title %></td>
-        <td><%= listing.description %></td>
-        <td><%= listing.price %></td>
-        <td><%= listing.sold %></td>
-        <td><%= listing.user_id %></td>
-        <td><%= listing.category_id %></td>
-        <td><%= link_to 'Show', listing %></td>
-        <% if current_user && current_user.id == listing.user_id%>
-          <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-          <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <th scope="col" class="px-6 py-3">Product</th>
+        <th scope="col" class="px-6 py-3">Description</th>
+        <th scope="col" class="px-6 py-3">Price</th>
+        <th scope="col" class="px-6 py-3">Sold</th>
+        <th scope="col" class="px-6 py-3">Username</th>
+        <th scope="col" class="px-6 py-3">Category</th>
+        <th scope="col" class="px-6 py-3"></th>
+        <%#<th colspan="3"></th>%>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @listings.each do |listing| %>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <td scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"><%= listing.title %></td>
+          <td class="px-6 py-4"><%= listing.description %></td>
+          <td class="px-6 py-4"><%= listing.price %></td>
+          <td class="px-6 py-4"><%= listing.sold %></td>
+          <td class="px-6 py-4"><%= listing.user_id %></td>
+          <td class="px-6 py-4"><%= listing.category_id %></td>
+          <td class="px-6 py-4 text-right font-medium text-indigo-800 text-indigo-800 hover:underline"><%= link_to 'Show', listing %></td>
+          <% if current_user && current_user.id == listing.user_id%>
+            <td class="px-6 py-4 text-right font-medium text-indigo-800 text-indigo-800 hover:underline"><%= link_to 'Edit', edit_listing_path(listing) %></td>
+            <td class="px-6 py-4 text-right font-medium text-indigo-800 text-indigo-800 hover:underline"><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-<%= link_to 'New Listing', new_listing_path %>
+
+<div class="px-8 py-8">
+  <button class="px-6 py-4 text-white bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:focus:ring-indigo-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+  <%= link_to 'New Listing', new_listing_path %>
+  </button>
+</div>
