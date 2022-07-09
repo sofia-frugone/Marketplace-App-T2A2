@@ -52,3 +52,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "devise", "~> 4.8"
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem 'acts-as-taggable-on', '~> 9.0'
