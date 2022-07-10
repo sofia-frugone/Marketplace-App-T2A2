@@ -20,13 +20,3 @@ module.exports = {
     require('@tailwindcss/typography'),
   ]
 }
-
-module.exports = {
-  theme: {
-    colors: {
-      primary: '#F28482',
-      secondary: '#F5CAC3',
-      // ...
-    }
-  }
-}
