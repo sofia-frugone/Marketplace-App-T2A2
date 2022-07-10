@@ -1,15 +1,19 @@
 # README
 ---
-###Makeup Zoo (the problem & the solution: R7/R8)
+### Makeup Zoo (the problem & the solution: R7/R8)
+
 As of June 30th 2021, there 2,402,254 actively trading businesses in the Australian economy. 98.4% of Australian businesses are small businesses. The vast majority (93%) of these businesses have a turnover of less than $2 million (afsbeo.gov.au). In Australia, the beauty market had an estimated revenue of $7,756 million in 2021. Most of this revenue goes towards household name brands such as Mecca and Sephora, making it harder for small businesses to compete and turn a profit. Many Australians like to support small businesses however there is no one stop destination for people to browse products from these brands. Makeup Zoo solves that problem and introduces a platform for small business owners to post their listings and get their name out to potential buyers. 
+
 ---
-###Link to the deployed application
+
+### Link to the deployed application
 [Makeup Zoo](https://makeupzoo.herokuapp.com/)
 ---
 ###Link to the github repo
 [Github](https://github.com/sofia-frugone/Marketplace-App-T2A2)
+
 ---
-###Description (R11)
+### Description (R11)
 
 **Purpose:**
 Makeup Zoo is a marketplace app which allows its user to buy and sell makeup from small businesses across Australia. 
@@ -28,8 +32,11 @@ Sellers can view what items have been purchased on the sold items page. Sold ite
 
 **View purchase history:**
 Buyers can view their purchase history in a table, similar to the sold orders page, items are displayed in a table with the seller username. 
+
 ---
-###Sitemap
+
+### Sitemap
+
 ![Structure Organization Chart Infographic Graph](https://user-images.githubusercontent.com/88522139/178142577-50f021d7-2985-43ec-98e0-297b1028bb56.png)
 ---
 ###Screenshots
@@ -41,10 +48,12 @@ Buyers can view their purchase history in a table, similar to the sold orders pa
 ![sign-in](https://user-images.githubusercontent.com/88522139/178142634-aac624cc-1f6f-47a0-8f7a-58b4e7541e60.png)
 ![sign-up](https://user-images.githubusercontent.com/88522139/178142639-c9651926-91ee-4e2f-8b52-4888c267f84d.png)
 ---
-##Target Audience
+### Target Audience
+
 The target audience for my application is Australians interested in makeup. Particularly makeup collectors who want to support small Australian businesses. My justification for “anyone interested in makeup” is that there is no particular gender or age group that enjoys makeup, it is enjoyed by all different demographics.  
 
-##Tech Stack
+### Tech Stack
+
 Ruby
 Html
 Css
@@ -52,8 +61,10 @@ Tailwind CSS: main framework used for styling
 Heroku: deployment platform
 Moqu: wireframes
 Trello: development tracking
+
 ---
-##User Stories (R12)
+
+### User Stories (R12)
 
 **Listing form:** As a user, I would like to create listings to sell my products.
 
@@ -115,30 +126,42 @@ As a seller, I would like to have a sold orders page so that I can see what prod
 -Listing price
 -Buyer username
 -Listing category
+
 ---
-##Wireframes (R13)
+
+### Wireframes (R13)
+
 ![buy-wf](https://user-images.githubusercontent.com/88522139/178142769-5498f3d4-1111-476c-b18a-aed595a47376.png)
 ![home-wf](https://user-images.githubusercontent.com/88522139/178142771-01fdd173-5192-4a9b-ab74-d5e727be6296.png)
 ![listings-wf](https://user-images.githubusercontent.com/88522139/178142773-c5e61484-b61c-4f03-9603-176db9aa795b.png)
 ![mobile-wf](https://user-images.githubusercontent.com/88522139/178142774-abcfd7fe-e6c9-4b27-9119-a4c98ca8361a.png)
 ![sign-in-up-wf](https://user-images.githubusercontent.com/88522139/178142775-4242073a-5bce-4de4-ab19-b33ad6e9baa8.png)
+
 ---
-##ERD (R14)
+
+### ERD (R14)
+
 ![marketplace-erd](https://user-images.githubusercontent.com/88522139/178142793-10b3dc7b-c3f7-438e-b6bd-31eaca0df93b.png)
+
 ---
-##Explain the different high-level components (abstractions) in your app (R15)
+
+### Explain the different high-level components (abstractions) in your app (R15)
 
 **Navbar & footer:** The navbar and footer were the most used components in the app. They display on every page. The navbar allows users to navigate easily through the site and the footer was simply a styling decision as all the links are dummy links. 
 
 **Tables:** Tables were used to display listing information on three pages: ‘listings’, ‘purchase history’ and ‘sold items’. It was the simplest way of displaying all the required information. If I were to re-do the assignment I would take more time to look into tailwind utility classes so there is less-repeat inline styling. 
 
 **Forms:** Similar to tables the same form styling was used for sign up, sign and new listing. The sign in and sign up forms are almost identical with minor changes. 
+
 ---
-##Detail any third party services that your app will use (R16)
+
+### Detail any third party services that your app will use (R16)
 
 Devise: Devise is an authentication solution for Rails based on Warden. It’s a complete MVC solution based on rails that is composed of 10 modules. Devise has been implemented into my app for user registration forms. 
+
 --
-##Describe your projects models in terms of the relationships (active record associations) they have with each other (R17)
+
+### Describe your projects models in terms of the relationships (active record associations) they have with each other (R17)
 
 Users:
 The users model was created first so the orders model and listing model could reference the user id for buyers and sellers. has _many specifies a one-to-many association, to demonstrate: a user can have many listings, sold orders and bought orders. 
@@ -151,8 +174,10 @@ Listings were created after categories. Listings reference the user_id and categ
 
 Orders:
 Orders were created last and similar to listings specify a one-to-one association with another class. An order belongs to a listing, a buyer and a seller. A foreign key was created for buyers and sellers from the user class. 
+
 ---
-##Discuss the database relations to be implemented in your application (R18)
+
+### Discuss the database relations to be implemented in your application (R18)
 
 There were four tables created for this project: users, listings, categories and orders. 
 
@@ -163,11 +188,16 @@ Listings: Listings have a one-to-one relationship with users, a user must create
 Categories: Categories have an optional-to-many relationship with listings, a category can belong to none or many listings. 
 
 Orders: Orders have a one-to-one relationship with users, an order can belong to only one user and similarly listings. The order table references the listing id, buyer id and seller id foreign key. 
+
 ---
-##Provide your database schema design (R19)
+
+### Provide your database schema design (R19)
+
 ![marketplace-schema](https://user-images.githubusercontent.com/88522139/178142871-bc480b0b-15fa-4e0d-9a9c-cd7abf2b6c15.png)
+
 ---
-##Describe the way tasks are allocated and tracked in your project (R20)
+
+### Describe the way tasks are allocated and tracked in your project (R20)
 
 Trello was the management tool used throughout the project. I enjoyed using trello due to the intuitive features and the fact that it is a lightweight version of Jira that does not require as much configuration. 6 columns were created to track progress throughout the development process: backlog, to-do, in progress, testing, done and blocked. 
 
