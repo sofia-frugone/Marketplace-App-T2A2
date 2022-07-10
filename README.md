@@ -1,15 +1,16 @@
 # README
 ---
-##Makeup Zoo (the problem & the solution: R7/R8)
-###As of June 30th 2021, there 2,402,254 actively trading businesses in the Australian economy. 98.4% of Australian businesses are small businesses. The vast majority (93%) of these businesses have a turnover of less than $2 million (afsbeo.gov.au). In Australia, the beauty market had an estimated revenue of $7,756 million in 2021. Most of this revenue goes towards household name brands such as Mecca and Sephora, making it harder for small businesses to compete and turn a profit. Many Australians like to support small businesses however there is no one stop destination for people to browse products from these brands. Makeup Zoo solves that problem and introduces a platform for small business owners to post their listings and get their name out to potential buyers. 
+###Makeup Zoo (the problem & the solution: R7/R8)
+As of June 30th 2021, there 2,402,254 actively trading businesses in the Australian economy. 98.4% of Australian businesses are small businesses. The vast majority (93%) of these businesses have a turnover of less than $2 million (afsbeo.gov.au). In Australia, the beauty market had an estimated revenue of $7,756 million in 2021. Most of this revenue goes towards household name brands such as Mecca and Sephora, making it harder for small businesses to compete and turn a profit. Many Australians like to support small businesses however there is no one stop destination for people to browse products from these brands. Makeup Zoo solves that problem and introduces a platform for small business owners to post their listings and get their name out to potential buyers. 
 ---
-##Link to the deployed application
-###[Makeup Zoo](https://makeupzoo.herokuapp.com/)
+###Link to the deployed application
+[Makeup Zoo](https://makeupzoo.herokuapp.com/)
 ---
-##Link to the github repo
-###[Github](https://github.com/sofia-frugone/Marketplace-App-T2A2)
+###Link to the github repo
+[Github](https://github.com/sofia-frugone/Marketplace-App-T2A2)
 ---
-##Description (R11)
+###Description (R11)
+
 **Purpose:**
 Makeup Zoo is a marketplace app which allows its user to buy and sell makeup from small businesses across Australia. 
 
@@ -28,10 +29,10 @@ Sellers can view what items have been purchased on the sold items page. Sold ite
 **View purchase history:**
 Buyers can view their purchase history in a table, similar to the sold orders page, items are displayed in a table with the seller username. 
 ---
-##Sitemap
+###Sitemap
 ![Structure Organization Chart Infographic Graph](https://user-images.githubusercontent.com/88522139/178142577-50f021d7-2985-43ec-98e0-297b1028bb56.png)
 ---
-##Screenshots
+###Screenshots
 ![homepage](https://user-images.githubusercontent.com/88522139/178142602-06a74c91-2623-4399-9ed3-aaca5c9cb9d7.png)
 ![listings](https://user-images.githubusercontent.com/88522139/178142608-a248e5c6-f114-4691-a390-475c25d62509.png)
 ![purchase-history](https://user-images.githubusercontent.com/88522139/178142611-401b0712-3db3-41f6-aa36-8efe78913d93.png)
