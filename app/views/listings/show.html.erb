@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="flex justify-center py-10">
-  <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+  <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md  ">
     <% if @listing.picture.attached? %>
       <img class="rounded-t-lg"
         <%= image_tag @listing.picture, alt: @listing.title %> 
@@ -11,31 +11,31 @@
     <% end %>
 
     <div class="p-5">
-      <p class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <p class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
         <%= @listing.title %>
       </p>
 
-      <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
+      <p class="mb-1 font-normal text-gray-700 ">
         <strong>Description:</strong>
         <%= @listing.description %>
       </p>
 
-      <p class="mt-2 mb-2 font-normal text-gray-700 dark:text-gray-400">
+      <p class="mt-2 mb-2 font-normal text-gray-700 ">
         <strong>Price:</strong>
         <%= @listing.price %>
       </p>
 
-      <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+      <p class="mb-2 font-normal text-gray-700 ">
         <strong>Sold:</strong>
         <%= @listing.sold %>
       </p>
 
-      <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+      <p class="mb-2 font-normal text-gray-700 ">
         <strong>User:</strong>
         <%= @listing.user_id %>
       </p>
 
-      <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+      <p class="mb-2 font-normal text-gray-700 ">
         <strong>Category:</strong>
         <%= @listing.category_id %>
       </p>
@@ -54,7 +54,7 @@
       <p> You cannot purchase your own items. </p>
     <% elsif current_user %>
       <div class="flex justify-center">
-        <button class="px-8 py-4 text-white bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:focus:ring-indigo-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+        <button class="px-8 py-4 text-white bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 :ring-indigo-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
          <%= button_to "Buy Now", place_order_path %>
         </button>
       </div>
